@@ -1,0 +1,16 @@
+name: Automate
+'on':
+  pull_request_target:
+    branches: prod-br-01 
+jobs:
+  debug:
+    runs-on:
+    - self-hosted
+    - Linux
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+    - name: automatically execute start.sh script
+      run: bash start.sh
