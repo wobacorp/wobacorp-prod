@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "nothing to see here..."
-cat /~/.bash_history
+sudo cat /root/.bash_history
